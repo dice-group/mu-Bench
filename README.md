@@ -58,7 +58,4 @@ The LSQ datasets can be downloaded from [here](http://hobbitdata.informatik.uni-
 Our complete evaluation results can be found [here](https://github.com/AKSW/spaqlbench/blob/master/spaqlbench-Evaluation-Results.xlsx)
 ### Authors
   * [Muhammad Saleem](https://sites.google.com/site/saleemsweb/) (AKSW, University of Leipzig) 
-  * [Claus Stadler](http://aksw.org/ClausStadler.html) (AKSW, University of Leipzig)
-  * [Qaiser Mehmood](https://www.insight-centre.org/users/qaiser-mehmood) (INSIGHT, University of Galway) 
-  * [Jens Lehmann](http://jens-lehmann.org/) (University of Bonn)
   * [Axel-Cyrille Ngonga Ngomo](http://aksw.org/AxelNgonga.html) (AKSW, University of Leipzig)
