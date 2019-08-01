@@ -51,6 +51,34 @@ minPts = Minimum points or queries in a cluster. In our evaluation we used min. 
 outputFile = The output TTL file where the resulting benchmark will be printed
 
 ```
+### Generating Benchmarks from Source 
+Download the source code from [here](https://hobbitdata.informatik.uni-leipzig.de/benchmarks-data/QALDGen-Source.7z). Unzip the folder which contains 4 -- Agglomerative, commons-math3, FEASIBLE, QALDBench-Generator -- java projects. QALDBench-Generator is the main project from where benchmarks can be generated. Note this project requires the other 3 project to be included in the build path. Also all the jar files in the lib folder of FEASIBLE and Agglomerative need to be added into the main project.
+```
+//Generate KMeans++ benchmarks from 
+package org.aksw.simba.sqcbench.centroid
+public class KmeansPlusPlus 
+
+//Generate DBSCAN+KMeans++ benchmarks from 
+package org.aksw.simba.qaldbench.hybrid
+public class DbscanAndKMeansPluPlus 
+
+//Generate FEASIBLE benchmarks from 
+package org.aksw.simba.qaldbench.feasible
+public class FEASIBLEClustering 
+
+//Generate FEASIBLE-Exemplars benchmarks from 
+package org.aksw.simba.qaldbench.feasible
+public class FeasibleExemplars
+
+//Generate Random selection benchmarks from 
+package org.aksw.simb.qaldbench.random
+public class RandomSelection
+
+//You can also generate Agglomerative benchmarks from 
+package org.aksw.simba.sqcbench.hierarchical
+public class Agglomerative
+However, Agglomerative clustering does not allow to generate fix number of clusters
+```
 ### LSQ Datasets
 The LSQ datasets can be downloaded from [here](http://hobbitdata.informatik.uni-leipzig.de/lsq-dumps/)
 ### Complette Evaluation Results
