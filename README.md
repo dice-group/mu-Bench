@@ -2,7 +2,7 @@
 SPARQLBench is a micro SPARQL benchmark creation framework which is able to create customized SPARQL benchmarks from real SPARQL query logs. The framework is flexible enough to generate benchmarks of varying sizes and according to the user-defined criteria on the most important SPARQL features to be considered for SPARQL query processing benchmarking. The generation of benchmarks is achieved by selecting prototypical queries (of a user-defined size and specialized selection criteria) using different clustering algorithms.
 
 ### Generating Benchmarks from CLI
-Download the folder [SPARQLBench-CLI](https://github.com/dice-group/SPARQL-Bench/tree/master/SPARQLBench-CLI) which contains a runable jar and a comtomized benchmark generation query file personalized-query.txt. Note the spaqlbench requires the LSQ dataset endpoint URL to be provided as input. For now, we have provided Virtuoso 7.2 endpoint for Semantic Web Dog Food (SWDF) from [here](https://hobbitdata.informatik.uni-leipzig.de/sparql-bench/). More endpoints both for windowns and linux will be available soon. The Windows virtuoso endpoint can be started from bin/start.bt while linux can be started from bin/start_virtuoso.sh.  
+Download the folder [SPARQLBench-CLI](https://github.com/dice-group/SPARQL-Bench/tree/master/SPARQLBench-CLI) which contains a runable jar and a comtomized benchmark generation query file personalized-query.txt. Note the spaqlbench requires the LSQ dataset endpoint URL to be provided as input. Exisitng LSQ endpoints are available from [here](https://hobbitdata.informatik.uni-leipzig.de/sparql-bench/lsq-endpoints/). More endpoints both for windowns and linux will be available soon. The Windows virtuoso endpoint can be started from bin/start.bt while linux can be started from bin/start_virtuoso.sh.  
 From the folder run the following commands: 
 ```html
 ### DBSCAN+Kmeans++ Format ### 
@@ -52,37 +52,35 @@ outputFile = The output TTL file where the resulting benchmark will be printed
 
 ```
 ### Generating Benchmarks from Source 
-Download the source code from [here](https://hobbitdata.informatik.uni-leipzig.de/benchmarks-data/QALDGen-Source.7z). Unzip the folder which contains 4 -- Agglomerative, commons-math3, FEASIBLE, QALDBench-Generator -- java projects. QALDBench-Generator is the main project from where benchmarks can be generated. Note this project requires the other 3 project to be included in the build path. Also all the jar files in the lib folder of FEASIBLE and Agglomerative need to be added into the main project.
+Download the source code from [here](https://hobbitdata.informatik.uni-leipzig.de/sparql-bench/source-code/). Unzip the folder which contains 4 -- Agglomerative, commons-math3, FEASIBLE, SPARQLBench-Generator -- java projects. SPARQLBench-Generator is the main project from where benchmarks can be generated. Note this project requires the other 3 project to be included in the build path. Also all the jar files in the lib folder of FEASIBLE and Agglomerative need to be added into the main project.
 ```
 //Generate KMeans++ benchmarks from 
-package org.aksw.simba.sqcbench.centroid
+package org.aksw.simba.sparqlbench.centroid
 public class KmeansPlusPlus 
 
 //Generate DBSCAN+KMeans++ benchmarks from 
-package org.aksw.simba.qaldbench.hybrid
+package org.aksw.simba.sparqlbench.hybrid
 public class DbscanAndKMeansPluPlus 
 
 //Generate FEASIBLE benchmarks from 
-package org.aksw.simba.qaldbench.feasible
+package org.aksw.simba.sparqlbench.feasible
 public class FEASIBLEClustering 
 
 //Generate FEASIBLE-Exemplars benchmarks from 
-package org.aksw.simba.qaldbench.feasible
+package org.aksw.simba.sparqlbench.feasible
 public class FeasibleExemplars
 
 //Generate Random selection benchmarks from 
-package org.aksw.simb.qaldbench.random
+package org.aksw.simb.sparqlbench.random
 public class RandomSelection
 
 //You can also generate Agglomerative benchmarks from 
-package org.aksw.simba.sqcbench.hierarchical
+package org.aksw.simba.sparqlbench.hierarchical
 public class Agglomerative
 However, Agglomerative clustering does not allow to generate fix number of clusters
 ```
 ### LSQ Datasets
-The LSQ datasets can be downloaded from [here](http://hobbitdata.informatik.uni-leipzig.de/lsq-dumps/)
-### Complette Evaluation Results
-Our complete evaluation results can be found [here](https://github.com/AKSW/spaqlbench/blob/master/spaqlbench-Evaluation-Results.xlsx)
+The LSQ datasets can be downloaded from [here](https://hobbitdata.informatik.uni-leipzig.de/lsq-dumps/1.0.1/)
 ### Authors
   * [Muhammad Saleem](https://sites.google.com/site/saleemsweb/) (AKSW, University of Leipzig) 
   * [Axel-Cyrille Ngonga Ngomo](http://aksw.org/AxelNgonga.html) (AKSW, University of Leipzig)
