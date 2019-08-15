@@ -80,7 +80,20 @@ public class Agglomerative
 However, Agglomerative clustering does not allow to generate fix number of clusters
 ```
 ### LSQ Datasets
-The LSQ datasets can be downloaded from [here](https://hobbitdata.informatik.uni-leipzig.de/lsq-dumps/1.0.1/)
+The LSQ datasets can be downloaded from [here](https://hobbitdata.informatik.uni-leipzig.de/lsq-dumps/1.0.1/).
+
+#### Load a LSQ Dataset via dockerized Virtuoso
+You can also use a dockerized Virtuoso to load the dataset. Make sure docker is installed on your system and you are in the [docker group](https://docs.docker.com/install/linux/linux-postinstall/).
+
+First, download and extract a LSQ dataset, e.g. [dbpedia-20160117](https://hobbitdata.informatik.uni-leipzig.de/lsq-dumps/1.0.1/lsq.1_0_1.2017-12-21.dbpedia-20160117.qel.sorted.nt.bz2):
+ ```shell script
+sh 01-download_and_extract_lsq_dataset.sh "https://hobbitdata.informatik.uni-leipzig.de/lsq-dumps/1.0.1/lsq.1_0_1.2017-12-21.dbpedia-20160117.qel.sorted.nt.bz2"
+```
+Second, start the virtuoso endpoint using docker:
+```shell script
+sh 02-start_lsq_endpoint.sh
+```
+The LSQ endpoint is running now at http://127.0.0.1:8890/sparql. 
 ### Authors
   * [Muhammad Saleem](https://sites.google.com/site/saleemsweb/) (AKSW, University of Leipzig) 
   * [Axel-Cyrille Ngonga Ngomo](http://aksw.org/AxelNgonga.html) (AKSW, University of Leipzig)
