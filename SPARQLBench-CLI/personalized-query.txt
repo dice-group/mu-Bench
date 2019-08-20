@@ -15,4 +15,6 @@ SELECT  DISTINCT ?qId ?projVars ?joinVertices ?tps ?rs ?rt ?meanJoinVertexDegree
 ?le  lsq:runTimeMs ?rt. 
 #?le  lsq:hasTPExec ?tpe . 
 #?tpe lsq:tpSel ?tpSel . 
+Filter (?rs > 0)
 }
+Limit 100000
