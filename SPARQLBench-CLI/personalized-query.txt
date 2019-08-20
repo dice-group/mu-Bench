@@ -1,0 +1,18 @@
+Prefix lsq: <http://lsq.aksw.org/vocab#>
+#SELECT  DISTINCT ?id ?projVars ?joinVertices ?tps ?rs ?rt ?meanJoinVertexDegree avg(?tpSel) as ?avgTpSel ?bgps count(?feature) as ?noFeatures
+SELECT  DISTINCT ?qId ?projVars ?joinVertices ?tps ?rs ?rt ?meanJoinVertexDegree 
+{
+?qId  lsq:text ?text. 
+?qId  lsq:hasStructuralFeatures ?sf .
+?sf   lsq:projectVars ?projVars . 
+?sf   lsq:joinVertices ?joinVertices . 
+?sf   lsq:tps ?tps .
+?sf   lsq:meanJoinVertexDegree ?meanJoinVertexDegree .
+#?sf   lsq:bgps ?bgps . 
+?sf   lsq:usesFeature  lsq:Select  . 
+?qId  lsq:hasLocalExec ?le . 
+?le  lsq:resultSize ?rs . 
+?le  lsq:runTimeMs ?rt. 
+#?le  lsq:hasTPExec ?tpe . 
+#?tpe lsq:tpSel ?tpSel . 
+}
