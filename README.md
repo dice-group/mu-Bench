@@ -8,36 +8,36 @@ From the folder run the following commands:
 ### DBSCAN+Kmeans++ Format ### 
  java -jar sparqlbench.jar -m <method> -n <noQueries> -i <maxNoIterations> -t <noTrialRun> -e <endpointUrl> -q <queryPersonalized> -r <radius> -p <minPts> -o <outputFile>
 An example format: 
-java -jar spaqlbench.jar   -m db+km++   -n 10   -i 10   -t 10   -e http://localhost:8890/sparql   -q personalized-query.txt   -r 1   -p 1   -o db+km++-10supqueries-benchmark.ttl
+java -jar sparqlbench.jar   -m db+km++   -n 10   -i 10   -t 10   -e http://localhost:8890/sparql   -q personalized-query.txt   -r 1   -p 1   -o db+km++-10supqueries-benchmark.ttl
 
 ### Kmeans++ Format ### 
  java -jar sparqlbench.jar -m <method> -n <noQueries> -i <maxNoIterations> -t <noTrialRun> -e <endpointUrl> -q <queryPersonalized> -o <outputFile>
 An example format: 
-java -jar spaqlbench.jar   -m km++   -n 10   -i 10   -t 10   -e http://localhost:8890/sparql   -q personalized-query.txt   -o km++-10supqueries-benchmark.ttl
+java -jar sparqlbench.jar   -m km++   -n 10   -i 10   -t 10   -e http://localhost:8890/sparql   -q personalized-query.txt   -o km++-10supqueries-benchmark.ttl
 
 
 ### FEASIBLE Format ### 
  java -jar saprqlbench.jar -m <method> -n <noQueries> -e <endpointUrl> -q <queryPersonalized> -o <outputFile>
 An example format: 
-java -jar spaqlbench.jar   -m feasible   -n 10  -e http://localhost:8890/sparql   -q personalized-query.txt   -o feasible-10supqueries-benchmark.ttl
+java -jar sparqlbench.jar   -m feasible   -n 10  -e http://localhost:8890/sparql   -q personalized-query.txt   -o feasible-10supqueries-benchmark.ttl
 
 
 ### Agglomerative Format ### 
  java -jar sparqlbench.jar -m <method> -n <noQueries> -e <endpointUrl> -q <queryPersonalized> -o <outputFile>
 An example format: 
-java -jar spaqlbench.jar   -m agglomerative   -n 10  -e http://localhost:8890/sparql   -q personalized-query.txt   -o agglomerative-10supqueries-benchmark.ttl
+java -jar sparqlbench.jar   -m agglomerative   -n 10  -e http://localhost:8890/sparql   -q personalized-query.txt   -o agglomerative-10supqueries-benchmark.ttl
 
 
 ### FEASIBLE-Exemplars Format ### 
  java -jar sparqlbench.jar -m <method> -n <noQueries> -e <endpointUrl> -q <queryPersonalized> -o <outputFile>
 An example format: 
-java -jar spaqlbench.jar   -m feasible-exmp   -n 10  -e http://localhost:8890/sparql   -q personalized-query.txt   -o feasible-exmp-10supqueries-benchmark.ttl
+java -jar sparqlbench.jar   -m feasible-exmp   -n 10  -e http://localhost:8890/sparql   -q personalized-query.txt   -o feasible-exmp-10supqueries-benchmark.ttl
 
 
 ### Random Selection Format ### 
  java -jar sparqlbench.jar -m <method> -n <noQueries> -e <endpointUrl> -q <queryPersonalized> -o <outputFile>
 An example format: 
-java -jar spaqlbench.jar   -m random   -n 10  -e http://localhost:8890/sparql   -q personalized-query.txt   -o random-10supqueries-benchmark.ttl
+java -jar sparqlbench.jar   -m random   -n 10  -e http://localhost:8890/sparql   -q personalized-query.txt   -o random-10supqueries-benchmark.ttl
 
 Where
 
