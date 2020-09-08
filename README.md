@@ -2,7 +2,7 @@
 SPARQLBench is a micro SPARQL benchmark creation framework which is able to create customized SPARQL benchmarks from real SPARQL query logs. The framework is flexible enough to generate benchmarks of varying sizes and according to the user-defined criteria on the most important SPARQL features to be considered for SPARQL query processing benchmarking. The generation of benchmarks is achieved by selecting prototypical queries (of a user-defined size and specialized selection criteria) using different clustering algorithms.
 
 ### Generating Benchmarks from CLI
-Download the folder [SPARQLBench-CLI](https://github.com/dice-group/SPARQL-Bench/tree/master/SPARQLBench-CLI) which contains a runable jar and a comtomized benchmark generation query file personalized-query.txt. Note the spaqlbench requires the LSQ dataset endpoint URL to be provided as input. Exisitng LSQ endpoints are available from [here](https://hobbitdata.informatik.uni-leipzig.de/sparql-bench/lsq-endpoints/). More endpoints both for windowns and linux will be available soon. The Windows virtuoso endpoint can be started from bin/start.bt while linux can be started from bin/start_virtuoso.sh.  
+Download the folder [SPARQLBench-CLI](https://github.com/dice-group/SPARQL-Bench/tree/master/SPARQLBench-CLI) which contains a runable jar and a comtomized benchmark generation query file `personalized-query.txt`. Note that SPARQLBench requires the LSQ dataset endpoint URL to be provided as input. Existing LSQ endpoints are available from [here](https://hobbitdata.informatik.uni-leipzig.de/sparql-bench/lsq-endpoints/). More endpoints both for Windows and Linux will be available soon. The Windows Virtuoso endpoint can be started from `bin/start.bat` while Linux can be started from `bin/start_virtuoso.sh`.  
 From the folder run the following commands: 
 ```html
 ### DBSCAN+Kmeans++ Format ### 
@@ -45,14 +45,14 @@ noQueries = Number of queries in the benchmark
 maxNoIterations = Maximum number of iterations for the KMeans++ clustering algorithm. In our evaluation we used maxNoIterations = 10. 
 noTrialRun = Number of trial run for the KMeans++ clustering algorithm. In our evaluation we used noTrialRun = 10.
 endpointURL = The LSQ endpoint URL containing containment relationships as well
-queryPersonalized = The personalized query for costum benchmark generation
+queryPersonalized = The personalized query for custom benchmark generation
 radius = Radius for the queries to be considered as outliers. In our evaluation we used radius = 1
 minPts = Minimum points or queries in a cluster. In our evaluation we used min. points = 1
 outputFile = The output TTL file where the resulting benchmark will be printed
 
 ```
 ### Generating Benchmarks from Source 
-Download the source code from [here](https://hobbitdata.informatik.uni-leipzig.de/sparql-bench/source-code/). Unzip the folder which contains 4 -- Agglomerative, commons-math3, FEASIBLE, SPARQLBench-Generator -- java projects. SPARQLBench-Generator is the main project from where benchmarks can be generated. Note this project requires the other 3 project to be included in the build path. Also all the jar files in the lib folder of FEASIBLE and Agglomerative need to be added into the main project.
+Download the source code from [here](https://hobbitdata.informatik.uni-leipzig.de/sparql-bench/source-code/). Unzip the folder which contains 4 Java projects: Agglomerative, commons-math3, FEASIBLE, SPARQLBench-Generator. SPARQLBench-Generator is the main project from where benchmarks can be generated. Note this project requires the other 3 projects to be included in the build path. Also all the Jar files in the `lib` folder of FEASIBLE and Agglomerative need to be added into the main project.
 ```
 //Generate KMeans++ benchmarks from 
 package org.aksw.simba.sparqlbench.centroid
@@ -83,13 +83,13 @@ However, Agglomerative clustering does not allow to generate fix number of clust
 The LSQ datasets can be downloaded from [here](https://hobbitdata.informatik.uni-leipzig.de/lsq-dumps/1.0.1/).
 
 #### Load a LSQ Dataset via dockerized Virtuoso
-You can also use a dockerized Virtuoso to load the dataset. Make sure docker is installed on your system and you are in the [docker group](https://docs.docker.com/install/linux/linux-postinstall/).
+You can also use a dockerized Virtuoso to load the dataset. Make sure Docker is installed on your system and you are in the [docker group](https://docs.docker.com/install/linux/linux-postinstall/).
 
 First, download and extract a LSQ dataset, e.g. [dbpedia-20160117](https://hobbitdata.informatik.uni-leipzig.de/lsq-dumps/1.0.1/lsq.1_0_1.2017-12-21.dbpedia-20160117.qel.sorted.nt.bz2):
  ```shell script
 sh 01-download_and_extract_lsq_dataset.sh "https://hobbitdata.informatik.uni-leipzig.de/lsq-dumps/1.0.1/lsq.1_0_1.2017-12-21.dbpedia-20160117.qel.sorted.nt.bz2"
 ```
-Second, start the virtuoso endpoint using docker:
+Second, start the Virtuoso endpoint using Docker:
 ```shell script
 sh 02-start_lsq_endpoint.sh
 ```
