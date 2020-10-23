@@ -96,4 +96,5 @@ sh 02-start_lsq_endpoint.sh
 The LSQ endpoint is running now at http://127.0.0.1:8890/sparql. 
 ### Authors
   * [Muhammad Saleem](https://sites.google.com/site/saleemsweb/) (AKSW, University of Leipzig) 
-  * [Axel-Cyrille Ngonga Ngomo](http://aksw.org/AxelNgonga.html) (AKSW, University of Leipzig)
+  * [Axel-Cyrille Ngonga Ngomo](http://aksw.org/AxelNgonga.html) (DICE, University of Paderborn)
+  * [Adnan Akhter](http://aksw.org/AdnanAkhter.html) (DICE, University of Paderborn)
