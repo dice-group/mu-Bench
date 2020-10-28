@@ -80,7 +80,7 @@ public class Agglomerative
 However, Agglomerative clustering does not allow to generate fix number of clusters
 ```
 ### LSQ Datasets
-The LSQ datasets can be downloaded from [here](https://hobbitdata.informatik.uni-leipzig.de/lsq-dumps/1.0.1/).
+The LSQ datasets can be downloaded from [here](https://hobbitdata.informatik.uni-leipzig.de/lsqv2/).
 
 #### Load a LSQ Dataset via dockerized Virtuoso
 You can also use a dockerized Virtuoso to load the dataset. Make sure docker is installed on your system and you are in the [docker group](https://docs.docker.com/install/linux/linux-postinstall/).
