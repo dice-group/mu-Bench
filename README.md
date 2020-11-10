@@ -48,7 +48,11 @@ endpointURL = The LSQ endpoint URL containing containment relationships as well
 queryPersonalized = The personalized query for costum benchmark generation
 radius = Radius for the queries to be considered as outliers. In our evaluation we used radius = 1
 minPts = Minimum points or queries in a cluster. In our evaluation we used min. points = 1
-outputFile = The output TTL file where the resulting benchmark will be printed
+outputFile = The output NT file where the resulting benchmark will be printed. 
+  
+ As the output is an NT file containing queries along with all LSQ statistics, you can get the text of the benchmark queries by executing the following SPARQL query. 
+  
+  SELECT DISTINCT ?text WHERE { ?s <http://lsq.aksw.org/vocab#text> ?text . ?s <http://lsq.aksw.org/vocab#hasRemoteExec> ?re . }
 
 ```
 ### Generating Benchmarks from Source 
