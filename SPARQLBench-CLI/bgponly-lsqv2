@@ -1,6 +1,6 @@
 #Use this query as template to generate BGP-only benchmarks in the latest version of LSQ, i.e. lsqv2
 Prefix lsq: <http://lsq.aksw.org/vocab#>
-SELECT  DISTINCT  ?text ?joinVertices ?tps ?rs ?rt ?meanJoinVertexDegree 
+SELECT  DISTINCT  ?qId ?joinVertices ?tps ?rs ?rt ?meanJoinVertexDegree 
 {
 ?qId  lsq:text ?text .
 ?qId  lsq:hasRemoteExec ?re . 
