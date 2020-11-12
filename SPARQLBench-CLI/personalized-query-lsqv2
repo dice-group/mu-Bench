@@ -14,6 +14,6 @@ SELECT  DISTINCT  ?qId  ?joinVertices ?tps ?rs ?rt ?meanJoinVertexDegree
 ?le   lsq:hasQueryExec ?qe . 
 ?qe   lsq:resultCount ?rs. 
 ?qe   lsq:evalDuration ?rt. 
-Filter (?rs > 0)
+Filter (?rs > 0 && ?rs < 20000000 && ?tps > 0)
 }
 Limit 1000000
