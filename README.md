@@ -1,9 +1,10 @@
 # mu-Bench
 mu=Bench is a SPARQL benchmark creation framework which is able to create customized SPARQL benchmarks from real SPARQL query logs. The framework is flexible enough to generate benchmarks of varying sizes and according to the user-defined criteria on the most important SPARQL features to be considered for SPARQL query processing benchmarking. The generation of benchmarks is achieved by selecting prototypical queries (of a user-defined size and specialized selection criteria) using different clustering algorithms.
 
-Citation
+### Citation
 
-mu-Bench: Real-world Micro Benchmarking for SPARQL Query Processing over Knowledge Graphs , Muhammad Saleem, Adnan Akhter, Sahar Vahdati and Axel-Cyrille Ngonga Ngomo, IJCKG 2022
+mu-Bench: Real-world Micro Benchmarking for SPARQL Query Processing over Knowledge Graphs
+Muhammad Saleem, Adnan Akhter, Sahar Vahdati and Axel-Cyrille Ngonga Ngomo, IJCKG 2022
 
 ### Generating Benchmarks from CLI
 Download the folder [SPARQLBench-CLI](https://github.com/dice-group/SPARQL-Bench/tree/master/SPARQLBench-CLI) which contains a runable jar and a comtomized benchmark generation query file personalized-query.txt. Note the spaqlbench requires the LSQ dataset endpoint URL to be provided as input. Exisitng LSQ endpoints are available from [here](https://hobbitdata.informatik.uni-leipzig.de/lsqv2/). More endpoints both for windowns and linux will be available soon. The Windows virtuoso endpoint can be started from bin/start.bt while linux can be started from bin/start_virtuoso.sh.  
